@@ -1,0 +1,134 @@
+body {
+  background-color: white;
+}
+h1 {
+    margin: 0;
+    height: 100vh;
+    display: flex; 
+  align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.neon {
+    position: relative;
+    overflow: hidden;
+    filter: brightness(200%);
+}
+
+.text {
+    background-color: white;
+    color: white;
+    font-size: 70px;
+    font-weight: bold;
+    font-family: Shadows Into Light;
+    text-transform: uppercase;
+    position: relative;
+    user-select: none;
+ 
+}
+
+.text::before {
+    content: attr(data-text);
+    position: relative;
+    color: white;
+    filter: blur(0.02em);
+    mix-blend-mode: difference;
+  
+}
+
+.gradient {
+    position: absolute;
+    background: linear-gradient(45deg, pink, purple, pink, purple, pink);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    mix-blend-mode: multiply;
+}
+
+.spotlight {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: 0;
+    bottom: 0;
+    background:   
+      radial-gradient(
+            circle,
+            white,
+            transparent 25%
+        ) center / 25% 25%,
+        radial-gradient(
+            circle,
+          white,
+            black 25%
+        ) center / 12.5% 12.5%;
+    animation: light 6s linear infinite;
+    mix-blend-mode: color-dodge;
+}
+  
+ @keyframes light {
+    to {
+        transform: translate(50%, 50%);
+    }
+
+}
+
+h2{
+  font-family: "Liu Jian Mao Cao", cursive;
+  text-align: center;
+  color: #000000;
+  background-color: white;
+  font-size: 30px;
+}
+img {
+  item-align: center;  
+}
+center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+span {
+  font-family: Caveat;
+}
+.big {
+    font-size: 40px;
+    font-weight: bold;
+}
+.body {
+font-size:30px;
+
+}
+#todo-list-item {
+ width: 300px;
+  color: #003333;
+  border-style: ridge;
+  border-radius: 7px;
+  text-align: center;
+}
+::placeholder {
+  color: #ff6666;
+ 
+} 
+#submit {
+   border-color: #ffffff;
+  border-width: 2px;
+  color:#ff6666;
+  border-style: ridge;
+  border-radius: 7px;
+  margin-left: 8px;
+  background-color: white;
+  text-align: center;
+  
+}
+
+.completed {
+  text-decoration:line-through;
+}
+.remove {
+  float:right;
+  cursor:pointer;
+}
