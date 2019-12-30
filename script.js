@@ -1,15 +1,5 @@
 $(document).ready(function(){
   
-  function run(){
-var password = prompt("Password Please");
-if(password != 'Hacker'){
-document.body.innerHTML = '';
-document.body.innerHTML = 'Password Failed! Reload to Renter Password';
-}else{
-alert('Success');
-}
-}
-run();
   $("#list-items").html(localStorage.getItem("listItems"));
     
     $(".add-items").submit(function(event){
